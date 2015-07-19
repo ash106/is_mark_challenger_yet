@@ -52,4 +52,5 @@ end
 
 gem 'puma'
 gem 'rack-timeout'
+gem 'bootstrap-sass', '~> 3.3.5'
 
