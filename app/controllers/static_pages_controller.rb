@@ -2,7 +2,7 @@ require 'lol'
 
 class StaticPagesController < ApplicationController
   def home
-    client = Lol::Client.new "432f5f95-5143-4093-b132-d64ee35f2447", {region: "na"}
+    client = Lol::Client.new ENV["RIOT_API_KEY"], {region: "na"}
     summoner_id = client.summoner.by_name("telegonies75")[0].id
     league_entries = client.league.get_entries(summoner_id)
     league_entries["#{summoner_id}"].each do |entry|
