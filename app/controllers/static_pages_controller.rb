@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
         @tier = entry.tier.capitalize
         @division = entry.entries[0].division
         @points = entry.entries[0].league_points
+        @answer = @tier == "Challenger" ? "Yes!" : "No."
       end
     end
   end
