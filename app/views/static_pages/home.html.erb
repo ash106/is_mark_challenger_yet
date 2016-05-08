@@ -3,7 +3,11 @@
 
   <h1><%= @answer %></h1>
 
-  <h3>Mark is <%= @tier %> <%= @division %>, <%= @points %> points.</h3>
+  <% if @division %>
+    <h3>Mark is <%= @tier %> <%= @division %>, <%= @points %> points.</h3>
+  <% else %>
+    <h3>Mark is <%= @tier %>, <%= @points %> points.</h3>
+  <% end %>
 
   <p>8)</p>
 </div>
